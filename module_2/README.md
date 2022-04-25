@@ -31,3 +31,30 @@ Jira par Agile un DevOps - https://www.atlassian.com/agile/devops
 GitHub Desktop - https://desktop.github.com/
 
 Autors Edijs
+
+13.
+[ed@testhost dev_ops_kursi]$  git cat-file -p main^{tree}
+100644 blob 513cff87ad50e129bf5e52fb687655352ed7381b    README.md
+040000 tree fb0e617ff2086e26f815ce0e0cd80c77de1e1a9a    ansible
+040000 tree 21a9f6d50a653ad5d4e9d6682cc44e877660b3e5    module_1
+040000 tree fb0e617ff2086e26f815ce0e0cd80c77de1e1a9a    terraform
+100644 blob 302e1fc83c80daba145df46615e26423793c5a37    test_file
+[ed@testhost dev_ops_kursi]$  git cat-file -p 21a9f6d50a653ad5d4e9d6682cc44e877660b3e5
+100644 blob e03a8a9b3fca6b8b58826b7710771fecb14e5a6c    README.md
+[ed@testhost dev_ops_kursi]$ git hash-object module_1/README.md
+e03a8a9b3fca6b8b58826b7710771fecb14e5a6c
+[ed@testhost dev_ops_kursi]$ git hash-object module_2/README.md
+e03a8a9b3fca6b8b58826b7710771fecb14e5a6c
+
+16. 
+git log --since=7.days
+git log --pretty="%h - %s" --since="2022-04-18"
+
+17.
+git log --pretty="%h - %s" --author='Laura Pacilio'
+
+18.
+git log --author='Laura Pacilio' --since="2021-09-01" --until="2021-10-01"
+
+19. 
+git log --author='Laura Pacilio' --since="2022-04-25" --until="2022-04-26"
