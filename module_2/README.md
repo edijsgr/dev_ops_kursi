@@ -51,6 +51,7 @@ e03a8a9b3fca6b8b58826b7710771fecb14e5a6c
 
 16. 
 git log --since=7.days
+
 git log --pretty="%h - %s" --since="2022-04-18"
 
 17.
